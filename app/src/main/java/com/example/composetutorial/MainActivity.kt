@@ -71,7 +71,9 @@ fun Greeting(msg: Message) {
         Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
             Text(text = msg.author, color = MaterialTheme.colorScheme.secondary, style = MaterialTheme.typography.titleSmall)
             Spacer(modifier = Modifier.height(4.dp))
-            Surface(shape = MaterialTheme.shapes.medium, shadowElevation = 1.dp, color = surfaceColor, modifier = Modifier.animateContentSize().padding(1.dp)) {
+            Surface(shape = MaterialTheme.shapes.medium, shadowElevation = 1.dp, color = surfaceColor, modifier = Modifier
+                .animateContentSize()
+                .padding(1.dp)) {
                 Text(
                     text = msg.body,
                     modifier = Modifier.padding(all = 4.dp),
